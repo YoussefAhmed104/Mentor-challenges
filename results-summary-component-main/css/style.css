@@ -1,0 +1,332 @@
+/* Fonts */
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+}
+/* Bold Font */
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("../assets/fonts/static/HankenGrotesk-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+/* Extra Bold */
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("../assets/fonts/static/HankenGrotesk-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 900;
+}
+/* Light Font */
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("../assets/fonts/static/HankenGrotesk-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+/* Global */
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: #ecf2ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parent {
+  width: 50%;
+  height: 97vh;
+}
+.container {
+  transform: translate(80%, 45%);
+  -webkit-transform: translate(80%, 45%);
+  -moz-transform: translate(80%, 45%);
+  -ms-transform: translate(80%, 45%);
+  -o-transform: translate(80%, 45%);
+  display: flex;
+  height: 55vh;
+  width: 800px;
+  background-color: #fff;
+  border-radius: 7%;
+  -webkit-border-radius: 7%;
+  -moz-border-radius: 7%;
+  -ms-border-radius: 7%;
+  -o-border-radius: 7%;
+}
+@media (max-width: 768px) {
+  .parent {
+    width: 100%;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -moz-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    -o-transform: translate(0%, 0%);
+    border-radius: 0 7% 0 7%;
+    -webkit-border-radius: 0 0% 7% 7%;
+    -moz-border-radius: 0 7% 0 7%;
+    -ms-border-radius: 0 7% 0 7%;
+    -o-border-radius: 0 7% 0 7%;
+  }
+}
+/* end Global */
+/* Left Card */
+.result {
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #6945ff, #332edf);
+  border-radius: 7%;
+  -webkit-border-radius: 7%;
+  -moz-border-radius: 7%;
+  -ms-border-radius: 7%;
+  -o-border-radius: 7%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .result {
+    width: 100%;
+    border-radius: 0 7% 0 7%;
+    -webkit-border-radius: 0 0% 7% 7%;
+    -moz-border-radius: 0 7% 0 7%;
+    -ms-border-radius: 0 7% 0 7%;
+    -o-border-radius: 0 7% 0 7%;
+    height: 85%;
+  }
+}
+.result h2 {
+  color: #cbc5ff;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 1.7em;
+}
+@media (max-width: 768px) {
+  .result h2 {
+    padding-top: 25px;
+    text-align: center;
+    font-size: 1.5em;
+  }
+}
+.result .persent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #4e23cc, #4a38ec);
+  border-radius: 100%;
+  width: 50%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  margin-left: 28%;
+  margin-top: 30px;
+  height: 38%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .result .persent {
+    width: 35%;
+    height: 34%;
+    margin-left: 33%;
+  }
+}
+.result .persent h1 {
+  color: #fff;
+  font-size: 4em;
+  font-weight: 900;
+  position: absolute;
+  padding-bottom: 20px;
+}
+.result .persent p {
+  color: #cbc5ff;
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-top: 70px;
+  opacity: 0.6;
+}
+.result .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.result .text h1 {
+  position: relative;
+  font-size: 2.2em;
+  font-weight: 700;
+  bottom: 25px;
+}
+.result .text p {
+  position: relative;
+  font-size: 1.15em;
+  font-weight: 400;
+  bottom: 25px;
+  color: #cbc5ff;
+  padding: 20px 80px;
+}
+@media (max-width: 768px) {
+  .result .text p {
+    padding: 20px 60px;
+  }
+}
+/* end Left Card */
+/* Right Card */
+.summery {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  padding-right: 63px;
+  padding-left: 63px;
+  background-color: #fff;
+}
+.summery h2 {
+  text-align: center;
+  padding-top: 50px;
+  padding-left: 45px;
+
+  font-size: 2em;
+  font-weight: 700;
+  color: #141f37cb;
+}
+@media (max-width: 768px) {
+  .summery {
+    width: 100%;
+    padding-right: 63px;
+  }
+  .summery h2 {
+    padding-top: 20px;
+  }
+}
+.summery .MindStats {
+  display: flex;
+  flex-direction: column;
+}
+.summery .MindStats .state {
+  display: flex;
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.summery .MindStats .state p {
+  font-size: 1.1em;
+  font-weight: 700;
+  padding-left: 15px;
+}
+.summery .MindStats .state .score {
+  position: absolute;
+  font-size: 1.3em;
+  font-weight: 900;
+  color: #141f37cb;
+  right: 85px;
+}
+.summery .MindStats .state .score span {
+  opacity: 0.4;
+}
+.summery .MindStats .one {
+  background-color: #fff6f7;
+}
+.summery .MindStats .one:hover {
+  background-color: #fedde0;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+.summery .MindStats .one:hover .score {
+  right: 20px;
+}
+.summery .MindStats .one p {
+  color: #ff4d6d;
+}
+.summery .MindStats .two {
+  background-color: #fffaf4;
+}
+.summery .MindStats .two:hover {
+  background-color: #fef1e1;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+.summery .MindStats .two:hover .score {
+  right: 20px;
+}
+.summery .MindStats .two p {
+  color: #ff8a00;
+}
+.summery .MindStats .three {
+  background-color: #f2fdf9;
+}
+.summery .MindStats .three:hover {
+  background-color: #e1fcf2;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+.summery .MindStats .three:hover .score {
+  right: 20px;
+}
+.summery .MindStats .three p {
+  color: #00b74d;
+}
+.summery .MindStats .four {
+  background-color: #f4f4fe;
+}
+.summery .MindStats .four:hover {
+  background-color: #dadaff;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+.summery .MindStats .four:hover .score {
+  right: 20px;
+}
+.summery .MindStats .four p {
+  color: #4e5bff;
+}
+
+button {
+  background-color: #303b59;
+  color: #fff;
+  height: 70px;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:active {
+  transform: scale(0.95);
+}
+button:hover {
+  background-color: #505b7a;
+  cursor: pointer;
+}
+
+/* end Right Card */
