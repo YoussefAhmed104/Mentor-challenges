@@ -1,0 +1,297 @@
+:root {
+  --off-white: #fafafa;
+  --me-message: #ede5f4;
+  --phone: #f5f3f8;
+  --right-line: #f9f4fa;
+  --light-vilote: #d344eb;
+  --dark-violet: #913bfe;
+  --text: #412755;
+}
+body {
+  background-color: var(--off-white);
+}
+.parent {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.parent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*  */
+  width: 552px;
+  height: 85vh;
+  background: linear-gradient(220deg, var(--light-vilote), var(--dark-violet));
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  z-index: -1;
+  transform: translateX(-25%);
+}
+.parent::after {
+  content: "";
+  position: absolute;
+  margin-left: 1000px;
+  margin-top: 110px;
+  width: 552px;
+  height: 85vh;
+  background-color: var(--right-line);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  z-index: -1;
+  transform: translateX(25%);
+}
+@media (min-width: 375px) and (max-width: 450px) {
+  .parent {
+    height: 125vh;
+  }
+  .parent::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -60%;
+    margin-top: -20vh;
+  }
+  .parent::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: -55vw;
+    margin-bottom: -30vh;
+  }
+}
+.phone {
+  z-index: 2;
+  position: relative;
+  width: 235px;
+  min-width: 234px;
+  height: 60vh;
+  background-color: var(--phone);
+  top: 20vh;
+  /* left: 24%; */
+  left: 350px;
+  border-radius: 33px;
+  border: 15px solid white;
+}
+.phone .camera {
+  position: absolute;
+  width: 140px;
+  height: 30px;
+  background-color: white;
+  left: 50px;
+  border-radius: 50px;
+  top: -12px;
+  display: flex;
+}
+.phone .top {
+  position: relative;
+  background: linear-gradient(270deg, var(--light-vilote), var(--dark-violet));
+  height: 60px;
+  border-radius: 20px 20px 5px 5px;
+  z-index: -1;
+  display: flex;
+}
+.phone .top .left {
+  font-size: 11px;
+  position: absolute;
+  top: 31px;
+  left: 14px;
+  color: #fff;
+}
+.phone .top img {
+  width: 21px;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  top: 24px;
+  left: 31px;
+}
+.phone .top .name {
+  font-size: 9px;
+  position: absolute;
+  top: 15px;
+  left: 66px;
+  color: white;
+}
+.phone .top .status {
+  font-size: 8px;
+  position: absolute;
+  left: 66px;
+  top: 28px;
+  color: #ffffff8c;
+}
+.phone .top .right {
+  font-size: 11px;
+  position: absolute;
+  top: 31px;
+  right: 14px;
+  color: #fff;
+}
+.phone .chat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.phone .chat .me {
+  align-self: flex-start;
+  background-color: var(--me-message) !important;
+  color: var(--light-vilote);
+  border-radius: 10px 10px 10px 3px !important;
+}
+.phone .chat .message {
+  box-sizing: border-box;
+  font-size: 7px;
+  background-color: #fff;
+  width: 60%;
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px 10px 3px 10px;
+}
+.phone .chat .pic img {
+  margin-top: 7px;
+  width: 35px;
+  border-radius: 7px;
+}
+.phone .chat .time {
+  background: linear-gradient(90deg, var(--light-vilote), var(--dark-violet));
+  color: #fff;
+  width: 70%;
+  height: 35px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+  padding-left: 5px;
+}
+@media (min-width: 375px) and (max-width: 450px) {
+  .phone {
+    z-index: 2;
+    position: relative;
+    width: 235px;
+    min-width: 234px;
+    height: 435.55px;
+    background-color: var(--phone);
+    top: 10vh;
+    /* left: 24%; */
+    left: 15%;
+    border-radius: 33px;
+    border: 15px solid white;
+  }
+  .phone .chat .message {
+    font-size: 8px;
+    margin-top: 6px;
+    padding-left: 5px;
+    padding-right: 3px;
+  }
+  .phone .chat .time {
+  background: linear-gradient(90deg, var(--light-vilote), var(--dark-violet));
+  color: #fff;
+  width: 70%;
+  height: 30px;
+  font-size: 8px;
+  margin-top: 6px;
+}
+}
+.phone .chat .time .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff00;
+  margin-right: 5px;
+  border: 2px solid #ffffff57;
+}
+.phone .chat .time p {
+  color: #ffffff78;
+  margin-left: 3px;
+}
+.phone .chat .time h2 {
+  margin-left: auto;
+  margin-right: 8px;
+  font-size: 13px;
+}
+.phone .input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 8px;
+}
+.phone .input input {
+  position: absolute;
+  border: none;
+  width: 90%;
+  height: 25px;
+  z-index: -1;
+  border-radius: 20px;
+  font-size: 11px;
+}
+input {
+  color: #333; /* لون النص */
+  font-weight: 600; /* جعل الخط سميك */
+  padding-left: 10px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out; /* تأثير ناعم عند التغيير */
+}
+.phone .input input::placeholder {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.351);
+}
+.phone .input input:focus {
+  border-color: #6a0dad; /* تغيير لون البوردر عند الكتابة */
+  box-shadow: 0 0 5px rgba(106, 13, 173, 0.5); /* إضافة تأثير ظل */
+}
+.circle-button {
+  width: 20px;
+  height: 20px;
+  background-color: #2e1a47; /* لون الخلفية */
+  border-radius: 50%; /* يجعل الزر دائري */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+  position: absolute;
+  top: 3px;
+  right: 15px;
+}
+.circle-button i {
+  color: white; /* لون الأيقونة */
+  font-size: 10px; /* حجم الأيقونة */
+}
+.circle-button:hover {
+  background-color: #1e1030;
+}
+.discription {
+  position: absolute;
+  left: 770px;
+  top: 270px;
+  width: 430px;
+}
+.discription h1 {
+  color: #3f265d;
+  font-size: 2.5rem;
+}
+.discription p {
+  color: #0000005b;
+  line-height: 24px;
+}
+@media (min-width:375px)and (max-width:450px){
+  .discription{
+  text-align: center;
+  position: absolute;
+  left: 35px;
+  top: 82vh;
+  width: 300px;
+  }
+}
